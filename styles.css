@@ -1,0 +1,417 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  --background-dk: #131613;
+  --background-lh: #648767;
+  /* --text-color-dk: */
+  --text-color-lg: #fff;
+  --text-color-lg-hover: #dad9d9;
+  --text-color-all-text: #212529;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--background-dk);
+  background-size: 100vw 100vh;
+}
+
+/* || Ocean tags */
+.ocean {
+  z-index: -9999;
+  position: absolute;
+  top: 4em;
+  transform: scaleY(-1);
+  height: 5%;
+  background: #015871;
+}
+
+.wave {
+  background: url(wave.svg) repeat-x;
+  position: absolute;
+  top: 0;
+  /* left: -36em; */
+  width: 6400px;
+  height: 198px;
+  animation: wave 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave.two {
+  /* left: -60em; */
+  top: 1em;
+}
+
+.wave:nth-of-type(2) {
+  top: 0;
+  animation: wave 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+/* || General */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.container-title {
+  color: var(--text-color-lg);
+  font-size: 3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-color-lg);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* || Nav */
+.nav-links a {
+  color: var(--text-color-lg);
+  transition-duration: 0.3s;
+}
+
+.nav-links {
+  list-style-type: none;
+  font-size: 26px;
+  text-align: right;
+}
+
+.nav-links li {
+  display: inline;
+  padding: 2%;
+}
+
+.nav-links li a:hover {
+  cursor: pointer;
+  color: var(--text-color-lg-hover);
+}
+
+/* || Hero */
+
+#name {
+  text-align: center;
+}
+
+#hero .col-xl-3 {
+  display: flex;
+  align-items: center;
+}
+
+#hero .col-xl-6 {
+  display: flex;
+  justify-content: center;
+}
+
+#hero .col-xl-6 img {
+  width: 92%;
+}
+
+/* || About */
+
+#about {
+  background-color: var(--background-lh);
+  text-align: center;
+}
+
+#about h3 {
+  color: var(--text-color-lg);
+}
+
+#about button,
+#contact button,
+#module-close {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 1em;
+  color: var(--text-color-all-text);
+}
+
+#about button,
+#contact button {
+  padding: 1em;
+  font-size: 18px;
+  margin-bottom: 1em;
+  border: solid 2px #fff;
+}
+
+#about button {
+  width: 80%;
+}
+
+#module-trigger {
+  display: none;
+}
+
+#resume-download a {
+  color: var(--text-color-all-text);
+}
+
+#about ul {
+  column-count: 2;
+  text-align: left;
+}
+
+/* || Projects */
+.projects .row {
+  display: flex;
+  justify-content: center;
+}
+
+.bobble,
+.bobble-more {
+  width: 94%;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: relative;
+  margin: 1em;
+  background-color: var(--text-color-lg);
+  padding: 5em 1em 5em 1em;
+  border-radius: 20px;
+  transition-duration: 0.4s;
+  text-align: center;
+}
+
+.col-xl-6.bobble,
+.col-xl-6.bobble-more {
+  max-width: 627px;
+}
+
+.bobble::before {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-lh);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.bobble h4,
+.bobble-more h4 {
+  z-index: 9999;
+  color: var(--text-color-lg);
+  background-color: #648767;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.4s ease;
+}
+
+.bobble p {
+  display: none;
+  transition: 0.4s ease 0.9s;
+  color: var(--text-color-all-text);
+  position: fixed;
+  top: 1em;
+}
+
+#LTC {
+  background-image: url(images/clusterSm.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#API {
+  background-image: url(images/APISm.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#BB {
+  background-image: url(images/BusyBeeSm.png);
+  background-size: contain;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#Foundation {
+  background-image: url(images/foundation-background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+/* || Contact */
+
+#contact {
+  background-color: var(--background-lh);
+  text-align: center;
+}
+
+#contact a {
+  color: var(--text-color-all-text);
+}
+
+/* || Module */
+
+#module-container {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  margin-top: 3em;
+  transition: 0.15s linear;
+  display: none;
+}
+
+#module {
+  background-color: var(--text-color-lg);
+  border-radius: 20px;
+  height: fit-content;
+  width: 66em;
+}
+
+#module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 0.3em;
+  overflow: auto;
+}
+
+#module h3 {
+  color: var(--text-color-all-text);
+}
+
+#module-close {
+  padding: 0.5em;
+  border: solid 2px var(--text-color-all-text);
+}
+
+#module-body {
+  display: flex;
+  justify-content: center;
+}
+
+embed {
+  width: 95%;
+  height: 600px;
+}
+
+#darkness {
+  background-color: #212529;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 998;
+  opacity: 0;
+  display: none;
+}
+
+/* keyframes */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .bobble:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  /* .bobble:hover::before {
+    opacity: 1;
+  }
+  .bobble:hover h4 {
+    display: none;
+  }
+  .bobble:hover p {
+    display: block;
+  } */
+
+  #ocean {
+    width: 6em;
+  }
+  .container {
+    max-width: 720px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 992px) {
+  #about {
+    text-align: unset;
+  }
+  #about-bio {
+    width: 85%;
+  }
+  #resume-download {
+    display: none;
+  }
+  #module-trigger {
+    display: block;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
