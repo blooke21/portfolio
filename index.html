@@ -80,7 +80,13 @@
               expanding my programming skills and eager to embrace new
               opportunities for development.
             </p>
-            <button tabindex="4" id="module-trigger">View Resume</button>
+            <button
+              tabindex="4"
+              class="module-trigger toggled-trigger"
+              id="resume-trigger"
+            >
+              View Resume
+            </button>
             <button tabindex="4" id="resume-download">
               <a href="/Blake-Warnock-Resume.pdf" target="_blank"
                 >Download Resume</a
@@ -106,27 +112,14 @@
       <div class="container">
         <h2 class="container-title">My Projects</h2>
         <div class="row">
-          <a
+          <!-- href="https://gotoltc.edu/programs-and-courses/career-areas" -->
+          <button
             tabindex="5"
-            href="https://gotoltc.edu/programs-and-courses/career-areas"
-            class="col-xl-6 bobble"
+            class="col-xl-6 bobble module-trigger"
             id="LTC"
-          >
-            <h4>LTC Career Areas</h4>
-
-            <p>
-              Redesigned LTC&rsquo;s degree program listing into a more visually
-              appealing web component that aligns with the standards defined by
-              the Wisconsin Technical College System.
-              <br />Used: Drupal, Jquery, CSS
-            </p>
-          </a>
-          <a
-            tabindex="6"
-            href="https://kohlerpubliclibrary.org#text-2"
-            class="col-xl-6 bobble"
-            id="API"
-          >
+          ></button>
+          <!-- href="https://kohlerpubliclibrary.org#text-2" -->
+          <button tabindex="6" class="col-xl-6 bobble" id="API">
             <h4>Kohler API</h4>
             <p>
               This project was a side job for the Wisconsin Kohler Public
@@ -142,15 +135,11 @@
               <br />
               Used: Knowledge of APIs, PHP, JavaScript, CSS
             </p>
-          </a>
+          </button>
         </div>
         <div class="row">
-          <a
-            tabindex="7"
-            href="/busybee-main/index.php"
-            class="col-xl-6 bobble"
-            id="BB"
-          >
+          <!-- href="/busybee-main/index.php" -->
+          <button tabindex="7" class="col-xl-6 bobble" id="BB">
             <h4>Busy Bee Snacks</h4>
             <p>
               Busy Bee Snacks is an e-commerce platform born from collaboration,
@@ -162,13 +151,9 @@
               <br />
               Used: PHP, JQuery, SQL, JavaScript, CSS, HTML
             </p>
-          </a>
-          <a
-            tabindex="8"
-            href="https://gotoltc.edu/lakeshore-college-foundation"
-            class="col-xl-6 bobble"
-            id="Foundation"
-          >
+          </button>
+          <!-- href="https://gotoltc.edu/lakeshore-college-foundation" -->
+          <button tabindex="8" class="col-xl-6 bobble" id="Foundation">
             <h4>Lakeshore College Foundation</h4>
             <p>
               It involved integrating the Lakshore College Foundation's
@@ -176,7 +161,7 @@
               <br />
               Used: Drupal, Jquery, CSS, HTML
             </p>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -194,15 +179,43 @@
         <p>© 2024</p>
       </div>
     </div> -->
-    <div id="module-container">
-      <div class="container" id="module">
-        <div id="module-header">
+    <div class="module-container" id="resume-module">
+      <div class="container module">
+        <div class="module-header">
           <h3>Blake&rsquo;s Resume</h3>
-          <button id="module-close">X</button>
+          <button class="module-close">X</button>
         </div>
-        <div id="module-body">
+        <div class="module-body">
           <!-- Embed PDF Resume -->
           <embed src="/Blake-Warnock-Resume.pdf" type="application/pdf" />
+        </div>
+      </div>
+    </div>
+    <div class="module-container" id="LTC-module">
+      <div class="container module sm">
+        <div class="module-header">
+          <h3>Lakeshore Career Area Project</h3>
+          <button class="module-close">X</button>
+        </div>
+        <div class="module-body">
+          <a href="#">View Project</a> |
+          <p class="used">Used: Drupal, Jquery, CSS</p>
+          <p></p>
+          <p>
+            Redesigned Lakeshore College&rsquo;s degree program listing into a
+            more visually appealing web component that aligns with the standards
+            defined by the Wisconsin Technical College System.
+          </p>
+          <div class="module-supercontainer">
+            <div class="module-subcontainer">
+              <h4>Current Page Look</h4>
+              <img src="images/Cluster-Module-New.png" alt="" />
+            </div>
+            <div class="module-subcontainer">
+              <h4>Previous Page Look</h4>
+              <img src="images/Cluster-Module-Previous.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
