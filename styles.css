@@ -402,9 +402,9 @@ embed {
 }
 
 /* temp styles for editing TODO remove*/
-#LTC-module {
+/* #LTC-module {
   display: block;
-}
+} */
 
 @media (min-width: 576px) {
   .module-container {

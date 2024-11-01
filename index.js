@@ -14,6 +14,19 @@ $(document).ready(function () {
       if (id == "LTC" && $(this).attr("id") == "LTC-module") {
         $(this).css("display", "block");
       }
+
+      if (id == "API" && $(this).attr("id") == "API-module") {
+        $(this).css("display", "block");
+      }
+
+      if (id == "BB" && $(this).attr("id") == "Bee-module") {
+        $(this).css("display", "block");
+      }
+
+      if (id == "Foundation" && $(this).attr("id") == "Foundation-module") {
+        $(this).css("display", "block");
+      }
+
       $("body").css("overflow", "hidden");
       $("#darkness").css({ opacity: ".5", display: "block" });
     });
