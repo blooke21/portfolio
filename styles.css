@@ -427,6 +427,23 @@ embed {
   display: block;
 } */
 
+#footer {
+  color: snow;
+  /* background-color: var(--background-lh); */
+}
+
+#footer .container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#footer p {
+  width: fit-content;
+  margin-bottom: 0;
+}
+
 @media (min-width: 576px) {
   .module-container {
     margin-top: 3em;
